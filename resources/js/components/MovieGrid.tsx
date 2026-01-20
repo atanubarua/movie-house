@@ -31,7 +31,7 @@ const movies = [
         title: "Dune: Part Two",
         genre: "Sci-Fi",
         releaseDate: "01 Mar 2024",
-        poster: "https://picsum.photos/300/450?random=3",
+        poster: "https://picsum.photos/300/450?random=4",
         trailerId: "Way9Dexny3w",
     },
 ];

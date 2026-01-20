@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class City extends Model
+class Theatre extends Model
 {
     protected $guarded = [];
 
-    public function theatres() {
-        return $this->hasMany(Theatre::class);
+    public function city() {
+        return $this->belongsTo(City::class);
     }
 }

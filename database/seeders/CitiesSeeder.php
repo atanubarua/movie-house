@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\City;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -13,12 +14,12 @@ class CitiesSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('cities')->insert([
-            'name' => 'Dhaka'
-        ]);
+        $cities = ['Dhaka', 'Chittagong'];
 
-        DB::table('cities')->insert([
-            'name' => 'Chittagong'
-        ]);
+        foreach ($cities as $city) {
+            City::firstOrCreate([
+                'name' => $city
+            ]);
+        }
     }
 }
